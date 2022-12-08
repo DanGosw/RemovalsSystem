@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name" translatable="true">Mudanzas "D'Boy"</string>
+    <string name="txtuser" translatable="true">User Name</string>
+    <string name="txtpass" translatable="true">Password</string>
+    <string name="txtfor" translatable="true">¿Olvido su  contraseña?</string>
+    <string name="chkre" translatable="true">Recuerdame</string>
+    <string name="txtclic" translatable="true">Click here</string>
+    <string name="btnlog" translatable="true">Iniciar Sesión</string>
+    <string name="btncre" translatable="true">Iniciar con Google</string>
+    <string name="image" translatable="true">UserLogin</string>
+    <string name="facebook" translatable="true">Facebook</string>
+    <string name="instagram" translatable="true">Instagram</string>
+    <string name="github" translatable="true">GitHub</string>
+    <string name="title_activity_main_menu">MainMenu</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Danny Boy</string>
+    <string name="nav_header_subtitle">dannyboy@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="cliente">Cliente</string>
+    <string name="inicio">Inicio</string>
+    <string name="empleados">Empleados</string>
+    <string name="solicitud">Solicitud</string>
+    <string name="vehiculos">Vehiculos</string>
+    <string name="servicios">Servicios</string>
+    <string name="salir">Cerrar Sesión</string>
+    <string name="drawer_open">Open Drawer</string>
+    <string name="drawer_close">Close Drawer</string>
+    <string name="welcome">Bienvenido al Sistema de Mudanzas</string>
+</resources>
