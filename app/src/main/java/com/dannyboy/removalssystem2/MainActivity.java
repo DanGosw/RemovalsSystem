@@ -1,6 +1,8 @@
 package com.dannyboy.removalssystem2;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -25,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         setTheme(R.style.Theme_RemovalsSystem2);
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if (ObtCondition()){
@@ -33,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(AC);
             finish();
         }
-        
-        user = (EditText) findViewById(R.id.txtuser);
-        pass = (EditText) findViewById(R.id.txtpass);
-        reme = (CheckBox) findViewById(R.id.remenber);
+    
+        user = findViewById(R.id.txtuser);
+        pass = findViewById(R.id.txtpass);
+        reme = findViewById(R.id.remenber);
         
         ActivatedRadio = reme.isChecked();
         reme.setOnClickListener(v -> {
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         String Uss=user.getText().toString();
         String Pas=pass.getText().toString();
     
-            Cursor fila = db.rawQuery("select username,pass from userstable where username='" + Uss + "' and pass='" + Pas + "'", null);
+            @SuppressLint("Recycle") Cursor fila = db.rawQuery("select username,pass from userstable where username='" + Uss + "' and pass='" + Pas + "'", null);
  
             if(fila.moveToFirst()){
                 String us= fila.getString(0);

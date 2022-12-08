@@ -16,7 +16,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/xd">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -46,7 +48,11 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="1dp"
                 android:background="@drawable/design_login_controls"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:elevation="10dp"
+                android:outlineSpotShadowColor="#BE6D50AE"
+                tools:targetApi="p"
+                android:id="@+id/aaa">
 
                 <TextView
                     android:id="@+id/textView3"
@@ -86,7 +92,7 @@
                         android:textColor="#9FA7BC"
                         android:textColorHint="#6a748c"
                         android:textColorLink="#6a748c"
-                        tools:ignore="TextContrastCheck" />
+                        tools:ignore="TextContrastCheck"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -181,18 +187,21 @@
                     app:backgroundTint="@null"
                     app:layout_constraintTop_toBottomOf="@+id/btnlog" />
             </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="bottom">
-
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:gravity="top"
+                tools:targetApi="p">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="16dp"
                         android:background="@drawable/design_login_controls"
                         android:gravity="center"
-                        android:padding="8dp">
+                        android:padding="10dp"
+                        android:elevation="9dp"
+                        android:outlineSpotShadowColor="#BE6D50AE"
+                        tools:targetApi="p">
 
                         <ImageButton
                             android:id="@+id/img_git"
@@ -215,7 +224,6 @@
                             android:background="@drawable/background_image"
                             android:layout_marginEnd="5dp"
                             android:contentDescription="@string/facebook"
-
                             android:scaleType="centerCrop"
                             app:srcCompat="@drawable/facebook_64px"
                             tools:ignore="RtlSymmetry" />
@@ -234,6 +242,19 @@
                             tools:ignore="RtlSymmetry" />
                     </LinearLayout>
                 </LinearLayout>
+
             </LinearLayout>
     </ScrollView>
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|end"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/wavebottom">
+        </LinearLayout>
+    </RelativeLayout>
+
 </RelativeLayout>
