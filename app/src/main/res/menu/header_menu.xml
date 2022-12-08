@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
         <item android:id="@+id/home"
@@ -22,6 +21,12 @@
         <item android:id="@+id/vehiculos"
             android:title="@string/vehiculos"
             android:icon="@drawable/ic_car_24"/>
+    </group>
+    <group android:id="@+id/xds"
+        android:checkableBehavior="single">
+        <item android:id="@+id/create"
+            android:title="@string/add"
+            android:icon="@drawable/add"/>
     </group>
     <group android:id="@+id/xd"
         android:checkableBehavior="single">

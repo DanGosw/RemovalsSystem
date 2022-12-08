@@ -31,5 +31,7 @@
         android:layout_gravity="start"
         app:menu="@menu/header_menu"
         app:headerLayout="@layout/nav_header_menu"
-        android:background="@color/purple_700"/>
+        android:background="@color/purple_700"
+        app:itemTextColor="#BCBDDA"
+        app:itemIconTint="#8775EA"/>
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -28,5 +28,14 @@
     <string name="drawer_open">Open Drawer</string>
     <string name="drawer_close">Close Drawer</string>
     <string name="welcome">Bienvenido al Sistema de Mudanzas</string>
+    <string name="create">Registrar un nuevo usuario </string>
     <string name="about">¿Quienes Somos?</string>
+    <string name="repeat">Repita la contraseña</string>
+    <string name="pass">Contraseña</string>
+    <string name="mail">Email o celular</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="nombres">Nombres</string>
+    <string name="create_user">Crear usuario</string>
+    <string name="add">Agregar Trabajadores</string>
+    <string name="add_picture">Agregar foto de perfil</string>
 </resources>

@@ -10,13 +10,14 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.Objects;
 
 public class MainMenu extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -30,9 +31,7 @@ protected void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
 	setContentView(R.layout.activity_main_menu);
 	
-	navigationView = (NavigationView)findViewById(R.id.nav_view);
-	navigationView.setItemTextColor(ColorStateList.valueOf(getResources().getColor(R.color.white)));
-	navigationView.setItemIconTintList(ColorStateList.valueOf(getResources().getColor(R.color.purple_200)));
+	navigationView = findViewById(R.id.nav_view);
 
 	mDrawerLayout = findViewById(R.id.drawerLayout);
 	navigationView = findViewById(R.id.nav_view);
@@ -46,19 +45,11 @@ protected void onCreate(Bundle savedInstanceState) {
 
 	toggle = new ActionBarDrawerToggle(MainMenu.this, mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
 	mDrawerLayout.addDrawerListener(toggle);
-	
-	setToolbar();
-	}
-
-
-private void setToolbar() {
-	toolbar = findViewById(R.id.toolbar);
-	setSupportActionBar(toolbar);
-	getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);
+	Objects.requireNonNull(getSupportActionBar()).setHomeAsUpIndicator(R.drawable.ic_menu);
 	getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-}
 
-
+	}
+	
 @Override
 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 	selectItemNav(item);
@@ -88,7 +79,10 @@ private void selectItemNav(MenuItem item) {
 		break;
 		case R.id.vehiculos:
 			ft.replace(R.id.content, new VehiculosFragment()).commit();
-		break;
+			break;
+		case R.id.create:
+			ft.replace(R.id.content, new CreateUser()).commit();
+			break;
 		case R.id.salir:
 			salir();
 		break;

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -42,29 +43,27 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/aaa"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="1dp"
+                android:layout_margin="16dp"
                 android:background="@drawable/design_login_controls"
-                android:orientation="vertical"
                 android:elevation="10dp"
+                android:orientation="vertical"
                 android:outlineSpotShadowColor="#BE6D50AE"
-                tools:targetApi="p"
-                android:id="@+id/aaa">
+                tools:targetApi="p">
 
                 <TextView
                     android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16sp"
+                    android:layout_marginEnd="32dp"
                     android:text="@string/welcome"
                     android:textAlignment="center"
-                    android:textSize="24sp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginTop="16sp"
-                    android:textColor="#93A3BA"/>
+                    android:textColor="#93A3BA"
+                    android:textSize="24sp" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/txtUsers"
@@ -92,7 +91,7 @@
                         android:textColor="#9FA7BC"
                         android:textColorHint="#6a748c"
                         android:textColorLink="#6a748c"
-                        tools:ignore="TextContrastCheck"/>
+                        tools:ignore="TextContrastCheck" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -179,7 +178,7 @@
                     android:layout_marginEnd="60dp"
                     android:layout_marginBottom="20dp"
                     android:background="@drawable/design_activity"
-                    android:drawableEnd="@drawable/google_30px"
+                    android:drawableEnd="@drawable/googleg_standard_color_18"
                     android:text="@string/btncre"
                     android:textAllCaps="false"
                     android:textColor="#E0E5F3"
@@ -202,7 +201,6 @@
                         android:elevation="9dp"
                         android:outlineSpotShadowColor="#BE6D50AE"
                         tools:targetApi="p">
-
                         <ImageButton
                             android:id="@+id/img_git"
                             android:layout_width="48dp"
@@ -215,7 +213,6 @@
                             android:scaleType="fitCenter"
                             app:srcCompat="@drawable/github_64px"
                             tools:ignore="RtlSymmetry" />
-
                         <ImageButton
                             android:id="@+id/img_fac"
                             android:layout_width="48dp"
@@ -227,7 +224,6 @@
                             android:scaleType="centerCrop"
                             app:srcCompat="@drawable/facebook_64px"
                             tools:ignore="RtlSymmetry" />
-
                         <ImageButton
                             android:id="@+id/img_ins"
                             android:paddingStart="5dp"
@@ -242,19 +238,6 @@
                             tools:ignore="RtlSymmetry" />
                     </LinearLayout>
                 </LinearLayout>
-
             </LinearLayout>
     </ScrollView>
-    <RelativeLayout
-        android:layout_height="match_parent"
-        android:layout_width="match_parent">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="bottom|end"
-            android:layout_alignParentBottom="true"
-            android:background="@drawable/wavebottom">
-        </LinearLayout>
-    </RelativeLayout>
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
