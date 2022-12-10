@@ -32,6 +32,7 @@
                 <com.mikhaellopez.circularimageview.CircularImageView
                     android:layout_width="180dp"
                     android:layout_height="180dp"
+                    android:id="@+id/us"
                     android:adjustViewBounds="false"
                     android:src="@drawable/user_img"
                     app:civ_border_color="#4152AC"
@@ -194,7 +195,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
                         android:background="@drawable/design_login_controls"
                         android:gravity="center"
                         android:padding="10dp"

@@ -3,16 +3,19 @@ package com.dannyboy.removalssystem2;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
@@ -97,7 +100,22 @@ public  void salir(){
 	startActivity(i);
 	finish();
 }
-
+	public boolean onKeyDown(int keyCode, KeyEvent event){
+	
+	if (keyCode == KeyEvent.KEYCODE_BACK){
+		AlertDialog.Builder builder= new AlertDialog.Builder(this);
+		builder.setMessage("¿Desea cerrar la sesión?").setPositiveButton("Si", (dialog, which) -> {
+			
+			Intent intent = new Intent(Intent.ACTION_MAIN);
+			intent.addCategory(Intent.CATEGORY_HOME);
+			intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			startActivity(intent);
+		}).setNegativeButton("Cancelar", (dialog, which) -> dialog.dismiss());
+		builder.show();
+	}
+	return super.onKeyDown(keyCode, event);
+	}
+	
 @Override
 public void onPostCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
 	super.onPostCreate(savedInstanceState, persistentState);
