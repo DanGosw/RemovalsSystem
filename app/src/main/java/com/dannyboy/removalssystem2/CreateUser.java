@@ -3,6 +3,8 @@ package com.dannyboy.removalssystem2;
 	import static android.app.Activity.RESULT_OK;
 	import androidx.annotation.Nullable;
 	import androidx.fragment.app.Fragment;
+	import androidx.fragment.app.FragmentManager;
+	import androidx.fragment.app.FragmentTransaction;
 	
 	import android.annotation.SuppressLint;
 	import android.content.Intent;
@@ -44,7 +46,8 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sa
 	pass = vista.findViewById(R.id.txtpass);
 	repe = vista.findViewById(R.id.txtrepet);
 	add_worker = vista.findViewById(R.id.btnlog);
-	db = new DataBaseHandler(getContext(), "addWorker.db", null, 3);
+	
+	db = new DataBaseHandler(getContext());
 	img.setOnClickListener(view -> LoadImage());
 	add_worker.setOnClickListener(view -> {
 		try {

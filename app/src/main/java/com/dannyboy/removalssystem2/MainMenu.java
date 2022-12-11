@@ -24,10 +24,10 @@ import java.util.Objects;
 
 public class MainMenu extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener{
 
-	DrawerLayout mDrawerLayout;
-	NavigationView navigationView;
-	Toolbar toolbar;
-	ActionBarDrawerToggle toggle;
+DrawerLayout mDrawerLayout;
+NavigationView navigationView;
+Toolbar toolbar;
+ActionBarDrawerToggle toggle;
 @Override
 protected void onCreate(Bundle savedInstanceState) {
 	
@@ -35,24 +35,24 @@ protected void onCreate(Bundle savedInstanceState) {
 	setContentView(R.layout.activity_main_menu);
 	
 	navigationView = findViewById(R.id.nav_view);
-
+	
 	mDrawerLayout = findViewById(R.id.drawerLayout);
 	navigationView = findViewById(R.id.nav_view);
 	toolbar = findViewById(R.id.toolbar);
 	
 	getSupportFragmentManager().beginTransaction().add(R.id.content , new HomeFragment()).commit();
 	setTitle("Inicio");
-
+	
 	setSupportActionBar(toolbar);
 	navigationView.setNavigationItemSelectedListener(this);
-
+	
 	toggle = new ActionBarDrawerToggle(MainMenu.this, mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
 	mDrawerLayout.addDrawerListener(toggle);
 	Objects.requireNonNull(getSupportActionBar()).setHomeAsUpIndicator(R.drawable.ic_menu);
 	getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-	}
 	
+}
+
 @Override
 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 	selectItemNav(item);
@@ -79,7 +79,7 @@ private void selectItemNav(MenuItem item) {
 			break;
 		case R.id.solicitud:
 			ft.replace(R.id.content, new SolicitudFragment()).commit();
-		break;
+			break;
 		case R.id.vehiculos:
 			ft.replace(R.id.content, new VehiculosFragment()).commit();
 			break;
@@ -88,7 +88,7 @@ private void selectItemNav(MenuItem item) {
 			break;
 		case R.id.salir:
 			salir();
-		break;
+			break;
 	}
 	setTitle(item.getTitle());
 	mDrawerLayout.closeDrawers();
@@ -100,7 +100,7 @@ public  void salir(){
 	startActivity(i);
 	finish();
 }
-	public boolean onKeyDown(int keyCode, KeyEvent event){
+public boolean onKeyDown(int keyCode, KeyEvent event){
 	
 	if (keyCode == KeyEvent.KEYCODE_BACK){
 		AlertDialog.Builder builder= new AlertDialog.Builder(this);
@@ -114,8 +114,8 @@ public  void salir(){
 		builder.show();
 	}
 	return super.onKeyDown(keyCode, event);
-	}
-	
+}
+
 @Override
 public void onPostCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
 	super.onPostCreate(savedInstanceState, persistentState);
@@ -124,8 +124,8 @@ public void onPostCreate(@Nullable Bundle savedInstanceState, @Nullable Persista
 
 @Override
 public void onConfigurationChanged(@NonNull Configuration newConfig) {
-		super.onConfigurationChanged(newConfig);
-		toggle.onConfigurationChanged(newConfig);
+	super.onConfigurationChanged(newConfig);
+	toggle.onConfigurationChanged(newConfig);
 }
 
 @Override
@@ -134,5 +134,5 @@ public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 		return  true;
 	}
 	return super.onOptionsItemSelected(item);
-	}
+}
 }

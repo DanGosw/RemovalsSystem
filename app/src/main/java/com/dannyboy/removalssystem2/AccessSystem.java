@@ -5,11 +5,8 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.Button;
 
-
-
 public class AccessSystem extends AppCompatActivity {
 
-    @SuppressLint("SuspiciousIndentation")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

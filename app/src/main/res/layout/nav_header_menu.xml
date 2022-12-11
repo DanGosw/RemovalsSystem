@@ -14,9 +14,11 @@
     android:layout_marginStart="1dp"
     android:layout_marginEnd="2dp"
     android:paddingTop="16dp"
+    android:id="@+id/drawerLayout"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/user_profile"
         android:layout_width="120dp"
         android:layout_height="match_parent"
         android:adjustViewBounds="false"
@@ -30,6 +32,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/user_name"
         android:paddingTop="2dp"
         android:text="@string/nav_header_title"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
@@ -37,6 +40,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/nav_header_subtitle"
-        android:id="@+id/textView" />
+        android:id="@+id/user_mail"
+        android:text="@string/nav_header_subtitle" />
 </LinearLayout>

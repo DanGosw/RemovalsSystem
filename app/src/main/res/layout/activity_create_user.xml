@@ -5,13 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1A1A24"
-    app:circularflow_defaultRadius="5dp"
     tools:context=".CreateUser">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:transitionGroup="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="UselessParent">
 
         <LinearLayout
@@ -21,6 +24,7 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/nose"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:background="@drawable/wave"
@@ -28,9 +32,9 @@
                 android:transitionGroup="true">
 
                 <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/user_image"
                     android:layout_width="180dp"
                     android:layout_height="180dp"
-                    android:id="@+id/user_image"
                     android:adjustViewBounds="false"
                     android:src="@drawable/user_img"
                     app:civ_border_color="#4152AC"
@@ -63,39 +67,39 @@
                     android:textColor="#93A3BA"
                     android:textSize="24sp" />
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:outlineSpotShadowColor="@color/white"
-                        android:textColorHint="#6a748c"
-                        app:boxBackgroundColor="#1A1A24"
-                        app:boxCornerRadiusBottomEnd="15dp"
-                        app:boxCornerRadiusBottomStart="15dp"
-                        app:boxCornerRadiusTopEnd="15dp"
-                        app:boxCornerRadiusTopStart="15dp"
-                        app:counterEnabled="true"
-                        app:counterMaxLength="25"
-                        app:counterTextColor="@color/purple_200"
-                        app:endIconTint="#59119E"
-                        app:hintTextColor="#6a748c">
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:outlineSpotShadowColor="@color/white"
+                    android:textColorHint="#6a748c"
+                    app:boxBackgroundColor="#1A1A24"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="25"
+                    app:counterTextColor="@color/purple_200"
+                    app:endIconTint="#59119E"
+                    app:hintTextColor="#6a748c">
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtname"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:drawableStart="@drawable/user"
-                            android:drawablePadding="5dp"
-                            android:hint="@string/nombres"
-                            android:inputType="textPersonName"
-                            android:maxLength="25"
-                            android:minHeight="48dp"
-                            android:padding="10dp"
-                            android:singleLine="true"
-                            android:textColor="#92A2B9"
-                            android:textColorLink="#6a748c"
-                            tools:ignore="TextContrastCheck" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtname"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableStart="@drawable/user"
+                        android:drawablePadding="5dp"
+                        android:hint="@string/nombres"
+                        android:inputType="textPersonName"
+                        android:maxLength="25"
+                        android:minHeight="48dp"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="#92A2B9"
+                        android:textColorLink="#6a748c"
+                        tools:ignore="TextContrastCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"

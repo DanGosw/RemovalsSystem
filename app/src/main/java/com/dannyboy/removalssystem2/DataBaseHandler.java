@@ -1,60 +1,48 @@
 package com.dannyboy.removalssystem2;
 
-import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.res.Resources;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.widget.ImageView;
-import android.widget.Toast;
-import androidx.annotation.Nullable;
-import androidx.core.content.res.ResourcesCompat;
-import java.util.Objects;
+
+
 
 public class DataBaseHandler extends SQLiteOpenHelper {
+Context context;
+private static final String DB_NAME ="addWorker.db";
+private static final int DB_VERSION =1;
 
-public DataBaseHandler(@Nullable Context context, String s, Object o, int i) {
-	super(context, "addWorker.db", null, 1);
-	BitmapFactory.Options options = new BitmapFactory.Options();
-	options.inScaled = false;
-	Bitmap source = BitmapFactory.decodeResource(Objects.requireNonNull(context).getResources(),
-		R.drawable.user_img, options);
-	img.setImageBitmap(source);
+public DataBaseHandler(Context context) {
+	super(context, DB_NAME, null, DB_VERSION);
+	this.context = context;
+
 }
-ImageView img;
 @Override
 public void onCreate(SQLiteDatabase db) {
 	
-	db.execSQL("create table  workerAccess(cod_work integer primary key autoincrement, image_work blob not null, nom_work text not null, ape_work text not null, correo text not null, password text not null)");
-	Bitmap bitmap = ((BitmapDrawable) Objects.requireNonNull(ResourcesCompat.getDrawable(Resources.getSystem(), R.drawable.user_img, null))).getBitmap();
-	img.setImageBitmap(bitmap);
-
-	db.execSQL("insert into workerAccess(image_work, nom_work, ape_work, correo, password) values('Danny', 'Boy', 'xd@gmail.com', '120417')");
+	String cretatetableUsers = "create table workerAccess(cod_w integer primary key autoincrement, image blob, nom_w text not null, ape_w text not null, correo text not null, password text not null)";
+	db.execSQL(cretatetableUsers);
+	db.execSQL(" insert into workeraccess(nom_w, ape_w, correo, password) values('Danny', 'Boy', 'xd@gmail.com', '120417')");
 }
 
-@SuppressLint("ResourceType")
 @Override
 public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-	db.execSQL("create table  workerAccess(cod_work integer primary key autoincrement, image_work blob, nom_work text not null, ape_work text not null, correo text not null, password text not null)");
 
-	
-	db.execSQL(" insert into workerAccess(nom_work, ape_work, correo, password) values('Danny', 'Boy', 'xd@gmail.com', '120417')");
+	db.execSQL(" insert into workeraccess(nom_w, ape_w, correo, password) values('Danny', 'Boy', 'xd@gmail.com', '120417')");
 }
+
+
 	public void  insertImage(byte [] im, String nom, String  ape, String  correo, String pass){
 
 	try {
 		SQLiteDatabase db = this.getWritableDatabase();
 		ContentValues values = new ContentValues();
-		values.put("image_work", im);
-		values.put("nom_work", String.valueOf(nom));
-		values.put("ape_work", String.valueOf(ape));
+		values.put("image", im);
+		values.put("nom_w", String.valueOf(nom));
+		values.put("ape_w", String.valueOf(ape));
 		values.put("correo", String.valueOf(correo));
 		values.put("password", String.valueOf(pass));
-		 db.insert("workerAccess", null, values);
+		 db.insert("workeraccess", null, values);
 		}catch (Exception e) {
 			e.printStackTrace();
 		}

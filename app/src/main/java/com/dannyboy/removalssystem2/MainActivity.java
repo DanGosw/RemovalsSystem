@@ -11,6 +11,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -21,7 +22,9 @@ public class MainActivity extends AppCompatActivity {
 private EditText user, pass;
 private TextView et;
 private CheckBox reme;
+
 private boolean ActivatedRadio;
+DBHelper admin;
 static final String STRING_PREFERENCES = "Hello";
 private static final String ConditionButton = "est.but.ses";
 
@@ -41,6 +44,9 @@ protected void onCreate(Bundle savedInstanceState) {
 	user = findViewById(R.id.txtuser);
 	pass = findViewById(R.id.txtpass);
 	reme = findViewById(R.id.remenber);
+	Button crea = findViewById(R.id.btncreate);
+	
+	crea.setOnClickListener(view -> CreateAccount());
 	
 	ActivatedRadio = reme.isChecked();
 	reme.setOnClickListener(v -> {
@@ -48,6 +54,16 @@ protected void onCreate(Bundle savedInstanceState) {
 		ActivatedRadio = reme.isChecked();
 	});
 }
+
+	private void CreateAccount(){
+	try {
+		Intent ven=new Intent( MainActivity.this, CreateUserLogin.class);
+		startActivity(ven);
+		finish();
+	}catch (Exception e){
+		Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+	}
+		}
 
 public void  SavedLogin(){
 	SharedPreferences PR = getSharedPreferences(STRING_PREFERENCES, Context.MODE_PRIVATE);
@@ -61,16 +77,16 @@ public boolean ObtCondition(){
 
 public void Login(View v){
 	try {
-		DBHelper admin=new DBHelper(this,"addWorker.db",null,1);
+		admin=new DBHelper(getBaseContext());
 		SQLiteDatabase db=admin.getWritableDatabase();
 		
 		String Uss=user.getText().toString();
 		String Pas=pass.getText().toString();
 		
-		@SuppressLint("Recycle") Cursor fila = db.rawQuery("select nom_work, password from workeraccess where nom_work='" + Uss + "' and password='" + Pas + "'", null);
+		@SuppressLint("Recycle") Cursor fila = db.rawQuery("select nom_w, password from workeraccess where nom_w='" + Uss + "' and password='" + Pas + "'", null);
 		
 		if(fila.moveToFirst()){
-
+			
 			fila.getString(0);
 			fila.getString(1);
 			SavedLogin();
@@ -79,15 +95,13 @@ public void Login(View v){
 			finish();
 		}
 		else {
-			Toast toast=Toast.makeText(this,"Datos incorrectos", Toast.LENGTH_LONG);
-			toast.show();
+			Toast.makeText(this,"Datos incorrectos", Toast.LENGTH_LONG).show();
 		}
 	}
 	catch (Exception e) {
 		et.setText(e.getMessage());
 		user.setText(e.getMessage());
-		Toast toast=Toast.makeText(this,"Error " + e.getMessage(),Toast.LENGTH_LONG);
-		toast.show();
+		Toast.makeText(this,"Error " + e.getMessage(),Toast.LENGTH_LONG).show();
 	}
 }
 
