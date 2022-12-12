@@ -1,32 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#13131B"
+    android:background="#11141B"
     tools:context=".HomeFragment">
 
-    <androidx.cardview.widget.CardView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="25dp"
-        android:elevation="65dp"
-        app:cardBackgroundColor="#20212E"
-        app:cardCornerRadius="25dp"
-        app:cardElevation="15dp"
-        app:cardMaxElevation="15dp">
+        android:layout_height="match_parent"
+        android:transitionGroup="true"
+        tools:ignore="UselessParent">
 
-        <TextView
-            android:id="@+id/who"
+        <LinearLayout
+            android:id="@+id/xd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/about"
-            android:textAlignment="center"
-            android:textColor="#969BC8"
-            android:textSize="34sp" />
-    </androidx.cardview.widget.CardView>
-</RelativeLayout>
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:outlineSpotShadowColor="#291951"
+                app:cardBackgroundColor="#181925"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="15dp"
+                app:cardMaxElevation="15dp"
+                tools:ignore="UnusedAttribute">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/who"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/yeon_sung"
+                        android:text="@string/about"
+                        android:textAlignment="center"
+                        android:textColor="#969BC8"
+                        android:textSize="34sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/girl_muding"
+                        android:padding="20dp"
+                        android:src="@drawable/mudanza" />
+
+                    <TextView
+                        android:id="@+id/ab"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/yeon_sung"
+                        android:text="@string/lorem"
+                        android:textAlignment="center"
+                        android:textColor="#969BC8"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/abou"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/yeon_sung"
+                        android:text="@string/about_two"
+                        android:textAlignment="center"
+                        android:textColor="#969BC8"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:elevation="15dp"
+                app:cardBackgroundColor="#181925"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="15dp"
+                app:cardMaxElevation="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/direc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/yeon_sung"
+                        android:text="@string/direc"
+                        android:textAlignment="center"
+                        android:textColor="#969BC8"
+                        android:textSize="34sp" />
+
+                    <com.google.android.gms.maps.MapView
+                        android:id="@+id/map"
+                        android:layout_width="match_parent"
+                        android:layout_height="334dp"
+                        android:contentDescription="@string/map"
+                        map:cameraZoom="16"
+                        map:uiRotateGestures="true"
+                        map:uiZoomControls="true" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/latit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/yeon_sung"
+                            android:text="@string/latitud"
+                            android:textAlignment="center"
+                            android:textColor="#969BC8"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/longi"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:fontFamily="@font/yeon_sung"
+                            android:text="@string/longitud"
+                            android:textAlignment="textEnd"
+                            android:textColor="#969BC8"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:elevation="10dp"
+                android:layout_marginBottom="15dp"
+                app:cardBackgroundColor="#181925"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="10dp"
+                app:cardMaxElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="serif-monospace"
+                        android:text="@string/foot"
+                        android:textAlignment="center"
+                        android:textColor="@color/purple_200"
+                        android:textSize="19sp" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

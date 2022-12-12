@@ -50,7 +50,6 @@ protected void onCreate(Bundle savedInstanceState) {
 	mDrawerLayout.addDrawerListener(toggle);
 	Objects.requireNonNull(getSupportActionBar()).setHomeAsUpIndicator(R.drawable.ic_menu);
 	getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-	
 }
 
 @Override

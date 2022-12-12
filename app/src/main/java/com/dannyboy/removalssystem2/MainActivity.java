@@ -55,7 +55,7 @@ protected void onCreate(Bundle savedInstanceState) {
 	});
 }
 
-	private void CreateAccount(){
+private void CreateAccount(){
 	try {
 		Intent ven=new Intent( MainActivity.this, CreateUserLogin.class);
 		startActivity(ven);
@@ -63,7 +63,7 @@ protected void onCreate(Bundle savedInstanceState) {
 	}catch (Exception e){
 		Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
 	}
-		}
+}
 
 public void  SavedLogin(){
 	SharedPreferences PR = getSharedPreferences(STRING_PREFERENCES, Context.MODE_PRIVATE);

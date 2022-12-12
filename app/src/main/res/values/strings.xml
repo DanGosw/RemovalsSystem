@@ -6,7 +6,7 @@
     <string name="chkre" translatable="true">Recuerdame</string>
     <string name="txtclic" translatable="true">Click here</string>
     <string name="btnlog" translatable="true">Iniciar Sesión</string>
-    <string name="btncre" translatable="true">Iniciar con Google</string>
+    <string name="btncre" translatable="true">Crear una cuenta</string>
     <string name="image" translatable="true">UserLogin</string>
     <string name="facebook" translatable="true">Facebook</string>
     <string name="instagram" translatable="true">Instagram</string>
@@ -41,4 +41,20 @@
     <string name="message">Send Message</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="girl_muding">girl_muding</string>
+    <string name="lorem">Somos una empresa familiar que comenzó sus actividades hace muchos años atrás, gracias al trabajo responsable y honesto nos hemos mantenido en el mercado a lo largo de todos estos años.</string>
+    <string name="about_two">Contamos con personal altamente capacitado para todo tipo de traslados de corta y larga distancia. Ofrecemos un servicio completo, con precios accesibles para todos los clientes que nos eligen, con la seguridad que usted y sus enseres se merecen.</string>
+    <string name="direc">¿Donde Encontrarnos?</string>
+    <string name="ubicanos">Ubicanos</string>
+    <string name="map">Maps</string>
+    <string name="latitud">Latitud</string>
+    <string name="longitud">Longitud</string>
+    <string name="foot">® All rights reserved - Designed by Danny Boy S.A</string>
+    <string name="add_customer">Agrega un cliente Nuevo</string>
+    <string name="dni">DNI</string>
+    <string name="a_pat">Apellido Paterno</string>
+    <string name="a_mat">Apellido Materno</string>
+    <string name="telefono">Telefono</string>
+    <string name="add_cliente">Agregar Cliente</string>
+    <string name="add_c">Search Customer</string>
 </resources>
