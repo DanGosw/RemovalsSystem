@@ -23,7 +23,8 @@ public class CreateUserLogin extends AppCompatActivity {
 ImageView img;
 EditText name, last, mail, pass, repe;
 DataBaseHandler db;
-Button add_worker;
+
+public Button add_worker;
 @Override
 protected void onCreate(Bundle savedInstanceState) {
 	

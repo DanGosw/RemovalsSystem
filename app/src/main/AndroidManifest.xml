@@ -23,7 +23,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyC_nfMwwuYpMltpRT1mqf_-sDHE6dApXbo" />
-
         <activity
             android:name=".CreateUserLogin"
             android:exported="false">
