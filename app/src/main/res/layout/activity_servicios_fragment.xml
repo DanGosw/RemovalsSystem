@@ -1,23 +1,262 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#11141B"
     tools:context=".ServiciosFragment">
 
-    <Button
-        android:id="@+id/btnmessage"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:transitionGroup="true"
+        tools:ignore="UselessParent">
 
-        android:text="@string/message"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.798" />
+        <LinearLayout
+            android:id="@+id/xd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_gravity="start"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/wave"
+                android:gravity="center"
+                android:transitionGroup="true">
+
+                <ImageView
+                    android:id="@+id/us"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="false"
+                    android:contentDescription="@string/aaa"
+                    android:src="@drawable/peopleworking"
+                    app:civ_border_color="#4152AC"
+                    app:civ_border_width="4dp"
+                    app:civ_shadow="true"
+                    app:civ_shadow_color="#9080CC"
+                    app:civ_shadow_radius="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/aaa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:layout_marginBottom="26dp"
+                android:background="@drawable/design_login_controls"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:outlineSpotShadowColor="#BE6D50AE"
+                android:padding="16dp"
+                tools:targetApi="p">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16sp"
+                    android:layout_marginEnd="32dp"
+                    android:text="@string/add_service"
+                    android:textAlignment="center"
+                    android:textColor="#93A3BA"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtUsers"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="#6a748c"
+                        app:boxBackgroundColor="#1A1A24"
+                        app:boxCornerRadiusBottomEnd="10dp"
+                        app:boxCornerRadiusBottomStart="10dp"
+                        app:boxCornerRadiusTopEnd="10dp"
+                        app:boxCornerRadiusTopStart="10dp"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="8"
+                        app:counterTextColor="@color/purple_200"
+                        app:endIconTint="#59119E">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txt_dni"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/service"
+                            android:drawablePadding="10dp"
+                            android:hint="@string/name_service"
+                            android:inputType="textPersonName"
+                            android:maxLength="8"
+                            android:minHeight="48dp"
+                            android:outlineSpotShadowColor="@color/white"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textColor="#92A2B9"
+                            android:textColorLink="#6a748c"
+                            app:counterMaxLength="8"
+                            app:counterTextColor="@color/purple_200"
+                            tools:ignore="TextContrastCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/nom"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColorHint="#6a748c"
+                    app:boxBackgroundColor="#1A1A24"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="55"
+                    app:counterTextColor="@color/purple_200"
+                    app:endIconTint="#59119E">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_nom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:drawableStart="@drawable/money"
+                        android:drawablePadding="5dp"
+                        android:ems="10"
+                        android:focusable="true"
+                        android:hint="@string/nombres"
+                        android:inputType="none"
+                        android:longClickable="false"
+                        android:maxLength="105"
+                        android:minHeight="48dp"
+                        android:padding="10dp"
+                        android:singleLine="false"
+                        android:textColor="#9FA7BC"
+                        android:textColorHint="#6a748c"
+                        android:textColorLink="#6a748c"
+                        android:textIsSelectable="false"
+                        tools:ignore="TextContrastCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="#1A1A24"
+                    android:minHeight="48dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/pat"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColorHint="#6a748c"
+                    app:boxBackgroundColor="#1A1A24"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="55"
+                    app:counterTextColor="@color/purple_200"
+                    app:endIconTint="#59119E">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_pat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:drawableStart="@drawable/identification"
+                        android:drawablePadding="5dp"
+                        android:ems="10"
+                        android:focusable="true"
+                        android:hint="@string/a_pat"
+                        android:inputType="none"
+                        android:longClickable="false"
+                        android:maxLength="55"
+                        android:minHeight="48dp"
+                        android:padding="10dp"
+                        android:singleLine="false"
+                        android:textColor="#9FA7BC"
+                        android:textColorHint="#6a748c"
+                        android:textColorLink="#6a748c"
+                        android:textIsSelectable="false"
+                        tools:ignore="TextContrastCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ape_mat"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColorHint="#6a748c"
+                    app:boxBackgroundColor="#1A1A24"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="55"
+                    app:counterTextColor="@color/purple_200"
+                    app:endIconTint="#59119E">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_mat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:drawableStart="@drawable/identification"
+                        android:drawablePadding="5dp"
+                        android:ems="10"
+                        android:focusable="true"
+                        android:hint="@string/a_mat"
+                        android:inputType="none"
+                        android:longClickable="false"
+                        android:maxLength="55"
+                        android:minHeight="48dp"
+                        android:padding="10dp"
+                        android:singleLine="false"
+                        android:textColor="#9FA7BC"
+                        android:textColorHint="#6a748c"
+                        android:textColorLink="#6a748c"
+                        android:textIsSelectable="false"
+                        tools:ignore="TextContrastCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnlog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginEnd="60dp"
+                    android:background="@drawable/design_activity"
+                    android:drawableEnd="@drawable/add_customer"
+                    android:drawingCacheQuality="auto"
+                    android:minHeight="48dp"
+                    android:text="@string/add_cliente"
+                    android:textAllCaps="false"
+                    android:textColor="#E0E5F3"
+                    android:textSize="16sp"
+                    app:backgroundTint="@null"
+                    app:layout_constraintTop_toBottomOf="@+id/txtpass" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

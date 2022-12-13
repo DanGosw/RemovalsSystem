@@ -128,7 +128,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/yeon_sung"
-                            android:text="@string/latitud"
+                            android:text=""
                             android:textAlignment="center"
                             android:textColor="#969BC8"
                             android:textSize="16sp" />
@@ -139,11 +139,20 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="end"
                             android:fontFamily="@font/yeon_sung"
-                            android:text="@string/longitud"
+                            android:text=""
                             android:textAlignment="textEnd"
                             android:textColor="#969BC8"
                             android:textSize="16sp" />
                     </LinearLayout>
+                    <TextView
+                        android:id="@+id/ubi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/yeon_sung"
+                        android:text="@string/longitud"
+                        android:textColor="#969BC8"
+                        android:textSize="16sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
