@@ -4,5 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:textSize="18sp"
-    android:padding="5dp"
-    android:textColor="#7779DA" />
+    android:padding="10dp"
+    android:hint="Seleccione el Servicio"
+    android:textColor="#7779DA"
+    android:background="#1A1A24">
+</TextView>

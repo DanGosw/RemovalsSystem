@@ -114,6 +114,7 @@
 
 
                 <com.google.android.material.textfield.TextInputLayout
+
                     android:id="@+id/nom"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
@@ -153,12 +154,15 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Spinner
-                    android:id="@+id/spinner"
+                    android:id="@+id/spin"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:background="#1A1A24"
-                    android:minHeight="48dp" />
+                    android:background="@drawable/spinner_style"
+                    android:contentDescription="@string/nosepo"
+                    android:minHeight="48dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="10dp" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/pat"
@@ -186,45 +190,6 @@
                         android:ems="10"
                         android:focusable="true"
                         android:hint="@string/a_pat"
-                        android:inputType="none"
-                        android:longClickable="false"
-                        android:maxLength="55"
-                        android:minHeight="48dp"
-                        android:padding="10dp"
-                        android:singleLine="false"
-                        android:textColor="#9FA7BC"
-                        android:textColorHint="#6a748c"
-                        android:textColorLink="#6a748c"
-                        android:textIsSelectable="false"
-                        tools:ignore="TextContrastCheck" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/ape_mat"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColorHint="#6a748c"
-                    app:boxBackgroundColor="#1A1A24"
-                    app:boxCornerRadiusBottomEnd="10dp"
-                    app:boxCornerRadiusBottomStart="10dp"
-                    app:boxCornerRadiusTopEnd="10dp"
-                    app:boxCornerRadiusTopStart="10dp"
-                    app:counterEnabled="true"
-                    app:counterMaxLength="55"
-                    app:counterTextColor="@color/purple_200"
-                    app:endIconTint="#59119E">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/txt_mat"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:clickable="true"
-                        android:drawableStart="@drawable/identification"
-                        android:drawablePadding="5dp"
-                        android:ems="10"
-                        android:focusable="true"
-                        android:hint="@string/a_mat"
                         android:inputType="none"
                         android:longClickable="false"
                         android:maxLength="55"

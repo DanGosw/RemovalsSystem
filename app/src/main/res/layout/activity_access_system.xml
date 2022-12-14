@@ -147,7 +147,7 @@
                     android:layout_margin="15dp"
                     android:hint="Buscar"
                     android:onClick="Login"
-                    android:textColorHint="#D1C4E9" />
+                    android:textColorHint="#FAFAFA" />
 
             </LinearLayout>
 
